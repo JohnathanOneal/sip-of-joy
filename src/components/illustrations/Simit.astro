@@ -1,0 +1,66 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Hand-drawn simit (Turkish sesame bread ring) illustration -->
+<svg
+  class={className}
+  viewBox="0 0 80 80"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Outer ring of simit -->
+  <circle
+    cx="40"
+    cy="40"
+    r="32"
+    stroke="currentColor"
+    stroke-width="2.5"
+    fill="none"
+  />
+
+  <!-- Inner hole -->
+  <circle
+    cx="40"
+    cy="40"
+    r="14"
+    stroke="currentColor"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- Twisted/braided texture lines -->
+  <path d="M12 28 Q18 32, 14 40 Q10 48, 16 54" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+  <path d="M20 12 Q26 16, 28 14" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+  <path d="M52 12 Q56 18, 62 16" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+  <path d="M66 28 Q62 34, 66 42 Q70 50, 64 56" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+  <path d="M54 66 Q48 70, 40 70 Q32 70, 26 66" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+
+  <!-- Sesame seeds scattered on top -->
+  <ellipse cx="18" cy="32" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(-30 18 32)" />
+  <ellipse cx="24" cy="18" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(20 24 18)" />
+  <ellipse cx="40" cy="10" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(-10 40 10)" />
+  <ellipse cx="56" cy="16" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(35 56 16)" />
+  <ellipse cx="66" cy="32" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(60 66 32)" />
+  <ellipse cx="68" cy="48" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(-45 68 48)" />
+  <ellipse cx="58" cy="62" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(15 58 62)" />
+  <ellipse cx="40" cy="68" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(-5 40 68)" />
+  <ellipse cx="22" cy="62" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(-40 22 62)" />
+  <ellipse cx="12" cy="48" rx="2.5" ry="1.2" fill="currentColor" opacity="0.5" transform="rotate(50 12 48)" />
+
+  <!-- More seeds for density -->
+  <ellipse cx="32" cy="12" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(10 32 12)" />
+  <ellipse cx="48" cy="11" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-20 48 11)" />
+  <ellipse cx="62" cy="24" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(45 62 24)" />
+  <ellipse cx="70" cy="40" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-60 70 40)" />
+  <ellipse cx="64" cy="56" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(25 64 56)" />
+  <ellipse cx="48" cy="67" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-15 48 67)" />
+  <ellipse cx="32" cy="67" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(30 32 67)" />
+  <ellipse cx="16" cy="56" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-35 16 56)" />
+  <ellipse cx="10" cy="40" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(55 10 40)" />
+  <ellipse cx="16" cy="24" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-25 16 24)" />
+</svg>

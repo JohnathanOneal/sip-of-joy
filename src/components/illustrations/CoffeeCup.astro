@@ -1,0 +1,68 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Hand-drawn style coffee cup SVG -->
+<svg
+  class={className}
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Cup body - sketchy lines -->
+  <path
+    d="M25 35 C24 36, 23 38, 22 55 C21 72, 28 82, 50 83 C72 84, 79 72, 78 55 C77 38, 76 36, 75 35"
+    stroke="currentColor"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    fill="none"
+    style="stroke-dasharray: 2 0;"
+  />
+  <!-- Cup rim -->
+  <ellipse
+    cx="50"
+    cy="35"
+    rx="27"
+    ry="6"
+    stroke="currentColor"
+    stroke-width="2.5"
+    fill="none"
+  />
+  <!-- Handle -->
+  <path
+    d="M75 42 C85 42, 90 50, 88 58 C86 66, 80 68, 75 65"
+    stroke="currentColor"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Steam lines -->
+  <path
+    d="M40 25 C38 20, 42 15, 40 10"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.6"
+  />
+  <path
+    d="M50 22 C52 17, 48 12, 50 7"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.6"
+  />
+  <path
+    d="M60 25 C62 20, 58 15, 60 10"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.6"
+  />
+</svg>

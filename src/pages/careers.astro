@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CoffeeCup from '../components/illustrations/CoffeeCup.astro';
+import Leaf from '../components/illustrations/Leaf.astro';
+import Squiggle from '../components/illustrations/Squiggle.astro';
+import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
+import Simit from '../components/illustrations/Simit.astro';
+import Pogaca from '../components/illustrations/Pogaca.astro';
+---
+
+<Layout title="Careers" description="Join the Sip of Joy team! We're hiring passionate people who love coffee, hospitality, and making others feel at home.">
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative py-24 md:py-32 overflow-hidden texture-grain">
+      <div class="absolute inset-0 bg-gradient-to-br from-cream via-warm-white to-cream"></div>
+
+      <!-- Decorative elements -->
+      <div class="absolute top-10 right-10 w-72 h-72 bg-cinnamon/10 blob-shape animate-pulse-soft hidden lg:block"></div>
+      <div class="absolute bottom-10 left-10 w-64 h-64 bg-sage/10 blob-shape-2 animate-pulse-soft hidden lg:block"></div>
+
+      <CoffeeCup class="absolute top-24 right-[10%] w-20 h-20 text-cinnamon/20 animate-float hidden md:block" />
+      <Simit class="absolute bottom-20 left-[8%] w-16 h-16 text-latte/30 animate-float-delayed hidden md:block" />
+      <Leaf class="absolute top-32 left-[20%] w-12 h-16 text-sage/25 rotate-45 animate-float hidden lg:block" />
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <p class="handwritten text-3xl md:text-4xl text-cinnamon mb-4 animate-fade-up">
+          Join our team
+        </p>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-espresso mb-6 animate-fade-up delay-100">
+          We're Hiring!
+        </h1>
+        <Squiggle class="w-48 h-4 mx-auto text-cinnamon/40 mb-6 animate-fade-in delay-200" />
+        <p class="text-xl text-mocha/80 max-w-2xl mx-auto animate-fade-up delay-300">
+          Love coffee? Passionate about hospitality? We'd love to meet you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 md:py-28 bg-warm-white">
+      <div class="max-w-4xl mx-auto px-6">
+
+        <!-- Intro with photo -->
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <img src="/images/about2.jpg" alt="Matt taking an order at Sip of Joy" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso mb-6">
+              Become Part of the Sip of Joy Family
+            </h2>
+            <p class="text-lg text-mocha/80 leading-relaxed">
+              At Sip of Joy, we believe in genuine hospitality, taking time to connect, and making every guest feel at home.
+              If that sounds like you, we want to hear from you!
+            </p>
+          </div>
+        </div>
+
+        <!-- What We're Looking For -->
+        <div class="bg-cream p-8 md:p-12 rounded-3xl mb-12">
+          <h3 class="font-display text-2xl font-semibold text-espresso mb-6 text-center">
+            What We're Looking For
+          </h3>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Friendly, welcoming attitude</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Passion for coffee & hospitality</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Reliable and punctual</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Team player mentality</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Willingness to learn</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-cinnamon flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-mocha/80">Experience a plus, but not required</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inclusive Hiring -->
+        <div class="bg-sage/20 border border-sage/30 p-6 md:p-8 rounded-2xl mb-12">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sage/30 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-espresso" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-espresso mb-2">We Welcome Everyone</h3>
+              <p class="text-mocha/80">
+                The Saris are committed to hiring from the neurodiverse community, offering employment opportunities to individuals with different needs. At Sip of Joy, everyone belongs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Apply -->
+        <div class="bg-espresso text-cream p-8 md:p-12 rounded-3xl relative overflow-hidden">
+          <TurkishPattern class="absolute top-0 right-0 w-48 h-48 text-cream/5" />
+          <TurkishPattern class="absolute bottom-0 left-0 w-32 h-32 text-cream/5" />
+
+          <div class="relative z-10 text-center">
+            <p class="handwritten text-3xl text-cinnamon mb-4">Ready to apply?</p>
+            <h3 class="font-display text-2xl md:text-3xl font-bold mb-6">
+              Send Us Your Resume
+            </h3>
+            <p class="text-cream/80 text-lg mb-8 max-w-xl mx-auto">
+              Email Matt directly with your resume and a brief note about why you'd love to join the Sip of Joy team.
+            </p>
+
+            <a
+              href="mailto:matt@sipofjoycafe.com?subject=Job Application - Sip of Joy&body=Hi Matt,%0D%0A%0D%0AI'm interested in joining the Sip of Joy team!%0D%0A%0D%0A[Please attach your resume and tell us a bit about yourself]"
+              class="inline-flex items-center gap-3 bg-cinnamon hover:bg-terracotta text-white px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              matt@sipofjoycafe.com
+            </a>
+
+            <p class="text-cream/60 text-sm mt-6">
+              Please include "Job Application" in your subject line
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="handwritten text-2xl text-cinnamon mb-2">Why Sip of Joy?</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso">
+            More Than Just a Job
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-warm-white p-8 rounded-2xl text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-3">Great Team</h3>
+            <p class="text-mocha/70">Work alongside passionate people who genuinely care about what they do.</p>
+          </div>
+
+          <div class="bg-warm-white p-8 rounded-2xl text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CoffeeCup class="w-8 h-8 text-cinnamon" />
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-3">Learn & Grow</h3>
+            <p class="text-mocha/70">Develop your barista skills and learn about Turkish coffee culture.</p>
+          </div>
+
+          <div class="bg-warm-white p-8 rounded-2xl text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-3">Welcoming Space</h3>
+            <p class="text-mocha/70">Be part of a cafe that values connection and community over rush.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-warm-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-mocha/70 text-lg mb-6">
+          Have questions before applying? Stop by the cafe and say hi to Matt!
+        </p>
+        <a
+          href="/contact"
+          class="inline-block border-2 border-espresso hover:bg-espresso hover:text-cream text-espresso px-8 py-3 rounded-full font-medium transition-colors text-lg"
+        >
+          Find Our Location
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,57 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Hand-drawn poğaça (Turkish pastry) illustration -->
+<svg
+  class={className}
+  viewBox="0 0 80 60"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Round puffy poğaça shape -->
+  <ellipse
+    cx="40"
+    cy="35"
+    rx="28"
+    ry="20"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Top dome/puff -->
+  <path
+    d="M15 35 C15 20, 25 10, 40 10 C55 10, 65 20, 65 35"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Decorative score marks on top (traditional poğaça pattern) -->
+  <path d="M30 18 L40 28 L50 18" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5" />
+  <path d="M25 25 L40 35 L55 25" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4" />
+
+  <!-- Sesame seeds on top -->
+  <ellipse cx="32" cy="15" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(-20 32 15)" />
+  <ellipse cx="40" cy="12" rx="2" ry="1" fill="currentColor" opacity="0.5" transform="rotate(10 40 12)" />
+  <ellipse cx="48" cy="14" rx="2" ry="1" fill="currentColor" opacity="0.4" transform="rotate(25 48 14)" />
+  <ellipse cx="36" cy="20" rx="1.5" ry="0.8" fill="currentColor" opacity="0.3" transform="rotate(-10 36 20)" />
+  <ellipse cx="44" cy="19" rx="1.5" ry="0.8" fill="currentColor" opacity="0.3" transform="rotate(15 44 19)" />
+
+  <!-- Golden glaze shine -->
+  <path
+    d="M25 22 C28 20, 32 19, 35 20"
+    stroke="currentColor"
+    stroke-width="1"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.3"
+  />
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "Sip of Joy Cafe & Bakery",
+  "short_name": "Sip of Joy",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#C68B59",
+  "background_color": "#FFFBF5",
+  "display": "standalone"
+}

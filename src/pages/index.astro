@@ -1,0 +1,420 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CoffeeCup from '../components/illustrations/CoffeeCup.astro';
+import Leaf from '../components/illustrations/Leaf.astro';
+import Squiggle from '../components/illustrations/Squiggle.astro';
+import Steam from '../components/illustrations/Steam.astro';
+import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
+import Pogaca from '../components/illustrations/Pogaca.astro';
+import Simit from '../components/illustrations/Simit.astro';
+import TurkeyOutline from '../components/illustrations/TurkeyOutline.astro';
+---
+
+<Layout title="Home">
+  <Nav />
+
+  <main>
+    <!-- ============================================
+         HERO SECTION - Dramatic & Warm
+         ============================================ -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden texture-grain">
+      <!-- Layered gradient background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-cream via-warm-white to-cream"></div>
+
+      <!-- Animated organic blob shapes -->
+      <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-cinnamon/10 blob-shape animate-pulse-soft"></div>
+      <div class="absolute bottom-[-15%] left-[-10%] w-[600px] h-[600px] bg-latte/15 blob-shape-2 animate-pulse-soft delay-500"></div>
+      <div class="absolute top-1/3 left-[10%] w-[300px] h-[300px] bg-sage/10 blob-shape-3 animate-pulse-soft delay-300"></div>
+
+      <!-- Turkish pattern decorations -->
+      <TurkishPattern class="absolute top-10 right-20 w-40 h-40 text-cinnamon/10 animate-rotate-slow hidden lg:block" />
+      <TurkishPattern class="absolute bottom-20 left-10 w-32 h-32 text-mocha/10 animate-rotate-slow hidden lg:block" style="animation-direction: reverse;" />
+
+      <!-- Floating illustrations -->
+      <div class="absolute top-32 right-[15%] animate-float hidden md:block">
+        <CoffeeCup class="w-28 h-28 text-cinnamon/25" />
+        <Steam class="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-24 text-mocha/30" />
+      </div>
+
+      <Leaf class="absolute bottom-40 left-[8%] w-20 h-28 text-sage/30 animate-float-delayed hidden md:block" />
+      <Leaf class="absolute top-48 left-[25%] w-14 h-20 text-cinnamon/20 rotate-45 animate-float hidden lg:block" />
+      <Pogaca class="absolute bottom-32 right-[12%] w-24 h-20 text-latte/40 animate-float-delayed hidden lg:block" />
+      <Simit class="absolute top-40 left-[5%] w-20 h-20 text-cinnamon/20 animate-float hidden lg:block" />
+      <TurkeyOutline class="absolute bottom-48 right-[25%] w-32 h-16 text-mocha/20 animate-float-delayed hidden lg:block" />
+
+      <!-- Main hero content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <!-- Handwritten welcome -->
+        <p class="handwritten text-4xl md:text-5xl text-cinnamon mb-4 animate-fade-up">
+          Welcome to
+        </p>
+
+        <!-- Main title with dramatic sizing -->
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-espresso mb-6 leading-tight animate-fade-up delay-200">
+          Sip of
+          <span class="block text-gradient italic pl-2">Joy</span>
+        </h1>
+
+        <!-- Decorative squiggle -->
+        <div class="animate-fade-in delay-400">
+          <Squiggle class="w-56 h-5 mx-auto text-cinnamon/40 mb-8" />
+        </div>
+
+        <!-- Tagline -->
+        <p class="text-xl md:text-2xl lg:text-3xl text-mocha/80 mb-10 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up delay-500">
+          A Türkiye-inspired cafe & bakery bringing
+          <span class="font-medium text-espresso">warmth</span>,
+          <span class="font-medium text-espresso">specialty coffee</span>, and
+          <span class="font-medium text-espresso">fresh-baked pastries</span>
+          to the heart of Boston.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-700">
+          <a
+            href="/menu"
+            class="group relative bg-cinnamon hover:bg-mocha text-white px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-105"
+          >
+            <span class="relative z-10">Explore Our Menu</span>
+            <div class="absolute inset-0 shimmer-effect"></div>
+          </a>
+          <a
+            href="/contact"
+            class="border-2 border-espresso hover:bg-espresso hover:text-cream text-espresso px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+          >
+            Visit Us
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================
+         ABOUT PREVIEW - Editorial Asymmetric Layout
+         ============================================ -->
+    <section id="about" class="py-24 md:py-32 bg-warm-white relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cream/50 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <!-- Text content - asymmetric positioning -->
+          <div class="lg:col-span-5 lg:col-start-1 relative z-10">
+            <div class="animate-slide-left">
+              <p class="handwritten text-3xl text-cinnamon mb-3">Our Story</p>
+              <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-espresso mb-8 leading-tight">
+                Love at
+                <span class="italic text-mocha">First Sip</span>
+              </h2>
+            </div>
+
+            <div class="space-y-6 text-lg text-mocha/80 leading-relaxed animate-slide-left delay-200">
+              <p>
+                Born from a passion for authentic Turkish hospitality and exceptional coffee,
+                Sip of Joy is more than a cafe. It's a <strong class="text-espresso font-medium">gathering place</strong>.
+              </p>
+              <p>
+                We source our beans with care, bake our pastries fresh daily,
+                and welcome every guest like family.
+              </p>
+            </div>
+
+            <div class="mt-10 animate-slide-left delay-400">
+              <a
+                href="/about"
+                class="group inline-flex items-center gap-3 text-cinnamon hover:text-mocha font-medium text-lg transition-colors"
+              >
+                <span>Learn more about us</span>
+                <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image area - overlapping cards design -->
+          <div class="lg:col-span-7 lg:col-start-6 relative">
+            <div class="relative animate-slide-right">
+              <!-- Main image -->
+              <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/exterior-1.jpg"
+                  alt="Sip of Joy cafe exterior"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Floating accent card -->
+              <div class="absolute -bottom-8 -left-8 md:-left-16 bg-espresso text-cream p-6 md:p-8 rounded-2xl shadow-xl max-w-[200px] md:max-w-[240px] animate-scale-in delay-500">
+                <p class="handwritten text-2xl md:text-3xl mb-2">Since 2023</p>
+                <p class="text-sm text-cream/80">Serving Boston with love</p>
+              </div>
+
+              <!-- Decorative frame offset -->
+              <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full border-2 border-cinnamon/30 rounded-3xl -z-10"></div>
+
+              <!-- Floating leaf -->
+              <Leaf class="absolute -top-10 -left-6 w-16 h-24 text-sage/40 -rotate-12 animate-float" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         WHAT WE OFFER - Elegant Cards
+         ============================================ -->
+    <section class="py-24 md:py-32 bg-cream relative overflow-hidden texture-grain">
+      <!-- Decorative elements -->
+      <div class="absolute top-20 left-10 w-64 h-64 bg-cinnamon/5 blob-shape-2"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-sage/5 blob-shape"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- Section header -->
+        <div class="text-center mb-16 md:mb-20">
+          <p class="handwritten text-3xl text-cinnamon mb-3 animate-fade-up">What We Offer</p>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-espresso mb-6 animate-fade-up delay-100">
+            More Than Just Coffee
+          </h2>
+          <div class="decorative-line w-24 mx-auto animate-fade-in delay-200"></div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+          <!-- Card 1 - Specialty Coffee -->
+          <div class="group bg-warm-white rounded-3xl shadow-sm hover-lift animate-fade-up delay-300 overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/images/turkish_coffee.jpg"
+                alt="Turkish coffee at Sip of Joy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8 md:p-10">
+              <h3 class="font-display text-2xl font-semibold text-espresso mb-4">
+                Specialty Coffee
+              </h3>
+              <p class="text-mocha/70 leading-relaxed text-lg">
+                From espressos and lattes to traditional Turkish coffee (Türk kahvesi),
+                every cup is crafted with care using freshly roasted beans.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 - Fresh Pastries -->
+          <div class="group bg-warm-white rounded-3xl shadow-sm hover-lift animate-fade-up delay-400 overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/images/pogaca.jpg"
+                alt="Fresh poğaça pastries"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8 md:p-10">
+              <h3 class="font-display text-2xl font-semibold text-espresso mb-4">
+                Fresh Pastries
+              </h3>
+              <p class="text-mocha/70 leading-relaxed text-lg">
+                House-made poğaça, simit (Turkish bagel), and an array of
+                sweet and savory treats baked fresh every morning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 - Warm Hospitality -->
+          <div class="group bg-warm-white rounded-3xl shadow-sm hover-lift animate-fade-up delay-500 overflow-hidden">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/images/workspace.jpg"
+                alt="Cozy workspace at Sip of Joy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-8 md:p-10">
+              <h3 class="font-display text-2xl font-semibold text-espresso mb-4">
+                Warm Hospitality
+              </h3>
+              <p class="text-mocha/70 leading-relaxed text-lg">
+                A cozy space to work, meet friends, or simply enjoy
+                a quiet moment. Everyone is welcome.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         LOCATION & HOURS - Split Design
+         ============================================ -->
+    <section class="py-24 md:py-32 bg-warm-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <!-- Hours side -->
+          <div class="relative animate-slide-left">
+            <div class="bg-espresso text-cream p-10 md:p-14 rounded-3xl shadow-2xl relative overflow-hidden">
+              <!-- Background pattern -->
+              <TurkishPattern class="absolute top-0 right-0 w-64 h-64 text-cream/5 -translate-y-1/4 translate-x-1/4" />
+
+              <p class="handwritten text-3xl text-cinnamon mb-4">Visit Us</p>
+              <h3 class="font-display text-3xl md:text-4xl font-bold mb-8">Our Hours</h3>
+
+              <div class="space-y-4 text-lg relative z-10">
+                <div class="flex justify-between items-center py-3 border-b border-cream/20">
+                  <span class="text-cream/80">Monday - Friday</span>
+                  <span class="font-medium">6 AM - 5 PM</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-cream/20">
+                  <span class="text-cream/80">Saturday - Sunday</span>
+                  <span class="font-medium">8 AM - 5 PM</span>
+                </div>
+              </div>
+
+              <!-- Decorative coffee cup -->
+              <CoffeeCup class="absolute bottom-6 right-6 w-20 h-20 text-cream/10" />
+            </div>
+          </div>
+
+          <!-- Location side -->
+          <div class="animate-slide-right">
+            <!-- Exterior photo -->
+            <div class="aspect-[16/9] rounded-2xl overflow-hidden shadow-lg mb-8">
+              <img
+                src="/images/exterior-2.jpg"
+                alt="Sip of Joy cafe storefront"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <p class="handwritten text-3xl text-cinnamon mb-3">Find Us</p>
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-espresso mb-6">
+              661 Tremont Street
+            </h3>
+            <p class="text-xl text-mocha/80 mb-8">Boston, Massachusetts</p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center gap-2 bg-cinnamon hover:bg-mocha text-white px-8 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Get Directions
+              </a>
+              <a
+                href="https://www.instagram.com/Sipofjoy_cafe"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 border-2 border-espresso hover:bg-espresso hover:text-cream text-espresso px-8 py-4 rounded-full font-medium transition-all duration-300 text-lg"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                @Sipofjoy_cafe
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FINAL CTA - Dramatic Full-Width
+         ============================================ -->
+    <section class="relative py-32 md:py-40 overflow-hidden">
+      <!-- Rich gradient background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-espresso via-mocha to-espresso"></div>
+
+      <!-- Animated decorative elements -->
+      <div class="absolute top-10 left-10 w-96 h-96 bg-cinnamon/10 blob-shape animate-pulse-soft"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-latte/10 blob-shape-2 animate-pulse-soft delay-500"></div>
+
+      <!-- Pattern overlay -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-1/4 left-1/4">
+          <TurkishPattern class="w-64 h-64 text-cream" />
+        </div>
+        <div class="absolute bottom-1/4 right-1/4">
+          <TurkishPattern class="w-48 h-48 text-cream" />
+        </div>
+      </div>
+
+      <!-- Floating illustrations -->
+      <CoffeeCup class="absolute top-20 right-[10%] w-24 h-24 text-cream/10 animate-float hidden lg:block" />
+      <Leaf class="absolute bottom-20 left-[15%] w-16 h-24 text-cream/10 animate-float-delayed hidden lg:block" />
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <p class="handwritten text-3xl md:text-4xl text-cinnamon mb-4 animate-fade-up">
+          We can't wait to see you
+        </p>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-8 leading-tight animate-fade-up delay-100">
+          Your Next Favorite
+          <span class="block italic text-latte">Coffee Awaits</span>
+        </h2>
+        <p class="text-xl md:text-2xl text-cream/80 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-up delay-200">
+          Stop by for your morning coffee, a midday treat, or an afternoon escape.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">
+          <a
+            href="/contact"
+            class="group relative bg-cinnamon hover:bg-terracotta text-white px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg overflow-hidden shadow-lg hover:shadow-xl hover:scale-105"
+          >
+            <span class="relative z-10">Get Directions</span>
+            <div class="absolute inset-0 shimmer-effect"></div>
+          </a>
+          <a
+            href="https://order.toasttab.com/egiftcards/boston-import-llc-99-parker-st-apt-3"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-cream/80 hover:bg-cream hover:text-espresso text-cream px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+          >
+            Buy a Gift Card
+          </a>
+        </div>
+
+        <!-- Instagram follow -->
+        <div class="mt-12 animate-fade-up delay-500">
+          <a
+            href="https://www.instagram.com/Sipofjoy_cafe"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 text-cream/70 hover:text-cinnamon transition-colors text-lg"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Follow @Sipofjoy_cafe for daily specials
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, observerOptions);
+
+  // Observe elements with reveal class
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+</script>

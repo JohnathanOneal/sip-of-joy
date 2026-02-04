@@ -1,0 +1,66 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Animated steam wisps -->
+<svg
+  class={className}
+  viewBox="0 0 60 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    class="steam-1"
+    d="M30 90 C25 75, 35 65, 28 50 C21 35, 35 25, 30 10"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.4"
+  />
+  <path
+    class="steam-2"
+    d="M20 95 C15 80, 28 70, 18 55 C8 40, 25 30, 20 15"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.3"
+  />
+  <path
+    class="steam-3"
+    d="M40 92 C45 77, 32 67, 42 52 C52 37, 38 27, 40 12"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.3"
+  />
+</svg>
+
+<style>
+  .steam-1 {
+    animation: steam-rise 3s ease-in-out infinite;
+  }
+  .steam-2 {
+    animation: steam-rise 3.5s ease-in-out infinite 0.5s;
+  }
+  .steam-3 {
+    animation: steam-rise 4s ease-in-out infinite 1s;
+  }
+
+  @keyframes steam-rise {
+    0%, 100% {
+      opacity: 0.1;
+      transform: translateY(0) scaleY(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translateY(-5px) scaleY(1.05);
+    }
+  }
+</style>

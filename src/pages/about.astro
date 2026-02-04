@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CoffeeCup from '../components/illustrations/CoffeeCup.astro';
+import Leaf from '../components/illustrations/Leaf.astro';
+import Squiggle from '../components/illustrations/Squiggle.astro';
+import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
+import Steam from '../components/illustrations/Steam.astro';
+---
+
+<Layout title="About" description="Meet Matt and Burju Sari, the family behind Sip of Joy. A Turkish-American café bringing Istanbul's café culture to Boston's South End.">
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative py-24 md:py-32 overflow-hidden texture-grain">
+      <div class="absolute inset-0 bg-gradient-to-br from-cream via-warm-white to-cream"></div>
+
+      <!-- Decorative elements -->
+      <div class="absolute top-10 right-10 w-72 h-72 bg-cinnamon/10 blob-shape animate-pulse-soft hidden lg:block"></div>
+      <div class="absolute bottom-10 left-10 w-64 h-64 bg-latte/10 blob-shape-2 animate-pulse-soft hidden lg:block"></div>
+
+      <TurkishPattern class="absolute top-20 right-[5%] w-32 h-32 text-cinnamon/10 animate-rotate-slow hidden lg:block" />
+      <Leaf class="absolute bottom-20 left-[8%] w-16 h-24 text-sage/30 animate-float-delayed hidden md:block" />
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <p class="handwritten text-3xl md:text-4xl text-cinnamon mb-4 animate-fade-up">
+          Our Story
+        </p>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-espresso mb-6 animate-fade-up delay-100">
+          A Family Café
+        </h1>
+        <Squiggle class="w-48 h-4 mx-auto text-cinnamon/40 mb-6 animate-fade-in delay-200" />
+        <p class="text-xl text-mocha/80 max-w-2xl mx-auto animate-fade-up delay-300">
+          Bringing Istanbul's café culture to Boston's South End since July 2023.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Story Section -->
+    <section class="py-20 md:py-28 bg-warm-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <!-- Image -->
+          <div class="relative animate-slide-left">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/about.jpg"
+                alt="The Sari family at Sip of Joy"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Decorative frame -->
+            <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border-2 border-cinnamon/30 rounded-3xl -z-10"></div>
+            <!-- Floating accent -->
+            <div class="absolute -top-6 -left-6 bg-espresso text-cream p-5 md:p-6 rounded-2xl shadow-xl">
+              <p class="handwritten text-2xl md:text-3xl">Est. 2023</p>
+            </div>
+            <Leaf class="absolute -bottom-8 -left-4 w-14 h-20 text-sage/40 rotate-12 hidden md:block" />
+          </div>
+
+          <!-- Story Text -->
+          <div class="animate-slide-right">
+            <p class="handwritten text-3xl text-cinnamon mb-4">The Founder</p>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-espresso mb-8 leading-tight">
+              Matt Sari
+            </h2>
+
+            <div class="space-y-6 text-lg text-mocha/80 leading-relaxed">
+              <p>
+                <strong class="text-espresso">Matt Sari</strong> founded Sip of Joy after years of planning,
+                driven by a dream to bring the warmth of Turkish café culture to Boston.
+              </p>
+              <p>
+                Matt spent several years working in Türkiye's hospitality industry before relocating to Massachusetts
+                in 1997, where he built a career in hotels and restaurants.
+              </p>
+              <p>
+                His wife <strong class="text-espresso">Burju</strong>, who teaches at a school for blind youth,
+                shares his vision for the cafe. Their twin sons, <strong class="text-espresso">Omer and Demir</strong>,
+                even helped out. They stained the wooden tables you'll sit at when you visit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Inspiration Quote -->
+    <section class="py-20 md:py-28 bg-cream relative overflow-hidden texture-grain">
+      <!-- Decorative elements -->
+      <div class="absolute top-20 right-10 w-64 h-64 bg-cinnamon/5 blob-shape-2"></div>
+      <div class="absolute bottom-10 left-10 w-80 h-80 bg-sage/5 blob-shape"></div>
+
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="bg-warm-white p-8 md:p-12 rounded-3xl shadow-lg relative">
+          <!-- Quote mark -->
+          <svg class="absolute top-6 left-6 w-12 h-12 text-cinnamon/20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+
+          <blockquote class="text-xl md:text-2xl text-mocha leading-relaxed pl-8 md:pl-12 italic">
+            "We used to go to a café, sit down, and talk for hours. We met with people, and helped each other.
+            Here, we felt like that's missing hugely."
+          </blockquote>
+          <p class="mt-6 pl-8 md:pl-12 text-cinnamon font-medium">- Burju Sari</p>
+
+          <!-- Decorative coffee cup -->
+          <div class="absolute -bottom-6 -right-6 hidden md:block">
+            <CoffeeCup class="w-20 h-20 text-cinnamon/20" />
+            <Steam class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-16 text-mocha/20" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Space -->
+    <section class="py-20 md:py-28 bg-warm-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <p class="handwritten text-3xl text-cinnamon mb-3">The Space</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-espresso">
+            Designed for Connection
+          </h2>
+        </div>
+
+        <!-- Photo grid with text -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <img src="/images/about2.jpg" alt="Matt taking an order at Sip of Joy" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <img src="/images/workspace.jpg" alt="Cozy workspace at Sip of Joy" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">Bright & Welcoming</h3>
+            <p class="text-mocha/70">Large street-facing windows flood the café with natural light, with white brick walls creating a warm, airy feel.</p>
+          </div>
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">Comfortable Seating</h3>
+            <p class="text-mocha/70">Hand-selected wooden tables paired with upholstered armchairs, made for lingering over coffee and conversation.</p>
+          </div>
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">Patio Tables</h3>
+            <p class="text-mocha/70">Blue mosaic-topped tables outside, perfect for people-watching on Tremont Street.</p>
+          </div>
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">Stay & Work</h3>
+            <p class="text-mocha/70">Free Wi-Fi and charging access. We want you to stay awhile.</p>
+          </div>
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">Family Touches</h3>
+            <p class="text-mocha/70">Turkish coffee served in mugs depicting Istanbul scenes. Every detail tells a story.</p>
+          </div>
+          <div class="bg-cream p-6 rounded-2xl">
+            <h3 class="font-display text-lg font-semibold text-espresso mb-2">South End Location</h3>
+            <p class="text-mocha/70">661 Tremont Street, in the heart of one of Boston's most vibrant neighborhoods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Serve -->
+    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
+      <TurkishPattern class="absolute top-10 left-10 w-32 h-32 text-cinnamon/5" />
+
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-12">
+          <p class="handwritten text-3xl text-cinnamon mb-3">What We Serve</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-espresso mb-6">
+            Carefully Sourced
+          </h2>
+          <p class="text-lg text-mocha/80 max-w-2xl mx-auto">
+            The Saris spent months sampling suppliers before opening. As Burju says,
+            <em>"These are the foods that we eat at home. I wouldn't serve anything that I don't like."</em>
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CoffeeCup class="w-8 h-8 text-cinnamon" />
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-2">George Howell Coffee</h3>
+            <p class="text-mocha/70 text-sm">Locally roasted beans from their neighbors, the Howell family.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-2">Turkish Pastries</h3>
+            <p class="text-mocha/70 text-sm">Baklava, simit, and börek from a trusted New Jersey bakery.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-cinnamon/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-espresso mb-2">Concord Teacakes</h3>
+            <p class="text-mocha/70 text-sm">American baked goods like brownies, lemon bars, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Commitment -->
+    <section class="py-20 md:py-28 bg-espresso text-cream relative overflow-hidden">
+      <TurkishPattern class="absolute top-0 right-0 w-64 h-64 text-cream/5" />
+      <TurkishPattern class="absolute bottom-0 left-0 w-48 h-48 text-cream/5" />
+      <div class="absolute top-10 left-10 w-96 h-96 bg-cinnamon/10 blob-shape animate-pulse-soft"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <p class="handwritten text-3xl text-cinnamon mb-4">Our Commitment</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">
+          Giving Back
+        </h2>
+
+        <div class="bg-mocha/30 p-8 md:p-10 rounded-3xl mb-8">
+          <blockquote class="text-xl md:text-2xl text-cream/90 leading-relaxed italic mb-6">
+            "I already have that warm welcome from everybody, and I want to give that back."
+          </blockquote>
+          <p class="text-cinnamon font-medium">- Matt Sari</p>
+        </div>
+
+        <p class="text-lg text-cream/80 max-w-2xl mx-auto">
+          The Saris are committed to hiring from the neurodiverse community, offering employment opportunities
+          to individuals with different needs. At Sip of Joy, everyone is welcome, whether as a guest or as part of the team.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-28 bg-warm-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <CoffeeCup class="w-16 h-16 text-cinnamon/40 mx-auto mb-6" />
+        <p class="handwritten text-3xl text-cinnamon mb-4">
+          Come say hello
+        </p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso mb-6">
+          We'd Love to Meet You
+        </h2>
+        <p class="text-lg text-mocha/80 mb-10 max-w-xl mx-auto">
+          Stop by Sip of Joy, grab a seat, and stay awhile.
+          Matt or Burju might just share a story with you over a cup of Turkish coffee.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="bg-cinnamon hover:bg-mocha text-white px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+          >
+            Visit Us
+          </a>
+          <a
+            href="/menu"
+            class="border-2 border-espresso hover:bg-espresso hover:text-cream text-espresso px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg"
+          >
+            View Our Menu
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,305 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CoffeeCup from '../components/illustrations/CoffeeCup.astro';
+import Leaf from '../components/illustrations/Leaf.astro';
+import Squiggle from '../components/illustrations/Squiggle.astro';
+import Simit from '../components/illustrations/Simit.astro';
+import Pogaca from '../components/illustrations/Pogaca.astro';
+import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
+
+const bottledDrinks = [
+  { name: "Still Water", price: "2.50" },
+  { name: "Pellegrino", price: "3.25" },
+  { name: "Apricot Nectar", price: "3.50" },
+  { name: "Mango Nectar", price: "3.50" },
+];
+
+const coldDrinks = [
+  { name: "Cold Brew", price: "4.25" },
+  { name: "Maple Cold Brew", price: "5.25" },
+  { name: "Pumpkin Cold Brew", price: "5.25" },
+  { name: "Iced Americano", price: "3.75" },
+  { name: "Iced Latte", price: "4.75" },
+  { name: "Iced Chai Tea Latte", price: "4.75" },
+  { name: "Iced Matcha", price: "5.50" },
+  { name: "Iced Tea", price: "3.50" },
+  { name: "Lemonade", price: "3.75" },
+  { name: "Iced Strawberry Matcha", price: "5.75" },
+  { name: "Iced Caramel Cappuccino", price: "5.75", note: "16oz only" },
+  { name: "Iced Caramel Latte", price: "5.75" },
+  { name: "Iced Orange Chai", price: "5.75" },
+  { name: "Iced Gingerbread Latte", price: "6.00" },
+  { name: "Iced Graham Cracker", price: "6.00" },
+  { name: "Iced Honey Pistachio Latte", price: "6.00" },
+  { name: "Iced Honey Vanilla Latte", price: "6.00" },
+  { name: "Iced Peppermint Mocha", price: "6.00" },
+  { name: "Iced Salted Honey", price: "6.00" },
+  { name: "Iced S'mores Latte", price: "6.00" },
+];
+
+const hotDrinks = [
+  { name: "Hot Tea", price: "3.00" },
+  { name: "Americano", price: "3.75" },
+  { name: "Cafe au Lait", price: "3.75" },
+  { name: "Hot Chocolate", price: "3.75" },
+  { name: "Macchiato", price: "4.00" },
+  { name: "Cappuccino", price: "4.25" },
+  { name: "Cortado", price: "4.25" },
+  { name: "Chai Tea Latte", price: "4.75" },
+  { name: "Flat White", price: "4.75" },
+  { name: "Latte", price: "4.75" },
+  { name: "Mocha", price: "5.25" },
+  { name: "Salted Honey Latte", price: "5.25" },
+  { name: "Matcha", price: "5.50" },
+  { name: "Turkish Coffee (Türk Kahvesi)", price: "5.50" },
+  { name: "Orange Chai Latte", price: "5.75" },
+  { name: "Gingerbread Latte", price: "6.00" },
+  { name: "Graham Cracker Latte", price: "6.00" },
+  { name: "Honey Pistachio Latte", price: "6.00" },
+  { name: "Honey Vanilla Latte", price: "6.00" },
+  { name: "Peppermint Mocha", price: "6.00" },
+  { name: "Peppermint S'mores", price: "6.00" },
+  { name: "S'mores Latte", price: "6.00" },
+];
+
+const food = [
+  { name: "Single Macaron", price: "2.50" },
+  { name: "Vegan & GF Cookies", price: "3.75" },
+  { name: "Pistachio Shortbread", price: "3.75" },
+  { name: "Walnut Shortbread", price: "3.75" },
+  { name: "Cinnamon Scone", price: "4.00" },
+  { name: "Bundt Cake", price: "4.75" },
+  { name: "Chocolate Brownie", price: "4.75" },
+  { name: "Lemon Bar", price: "4.75" },
+  { name: "Loaf Cake", price: "4.75" },
+  { name: "Raspberry Bar", price: "4.75" },
+  { name: "Simit (Turkish Bagel)", price: "4.75" },
+  { name: "Turkish Bread w/ Cheese", price: "4.75" },
+  { name: "Turkish Bread w/ Olives", price: "4.75" },
+  { name: "Croissant", price: "5.25" },
+  { name: "Cheese Pie", price: "6.95" },
+  { name: "Spinach & Feta Pie", price: "6.95" },
+  { name: "Fig Baklava", price: "7.50" },
+  { name: "Milky Baklava", price: "7.50" },
+  { name: "Whirl of Kadaifi", price: "7.50" },
+  { name: "Cheesecake Baklava", price: "8.00" },
+  { name: "Meat Lovers' Pie", price: "8.00" },
+];
+---
+
+<Layout title="Menu" description="Explore our menu of specialty coffees, Turkish coffee, fresh pastries, and savory treats at Sip of Joy Cafe in Boston.">
+  <Nav />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative py-24 md:py-32 overflow-hidden texture-grain">
+      <div class="absolute inset-0 bg-gradient-to-br from-cream via-warm-white to-cream"></div>
+
+      <!-- Decorative elements -->
+      <div class="absolute top-10 right-20 w-72 h-72 bg-cinnamon/10 blob-shape animate-pulse-soft hidden lg:block"></div>
+      <div class="absolute bottom-10 left-10 w-64 h-64 bg-latte/10 blob-shape-2 animate-pulse-soft hidden lg:block"></div>
+
+      <CoffeeCup class="absolute top-20 right-[10%] w-20 h-20 text-cinnamon/20 animate-float hidden md:block" />
+      <Simit class="absolute bottom-20 left-[8%] w-16 h-16 text-latte/30 animate-float-delayed hidden md:block" />
+      <Pogaca class="absolute top-32 left-[15%] w-14 h-12 text-cinnamon/15 animate-float hidden lg:block" />
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <p class="handwritten text-3xl md:text-4xl text-cinnamon mb-4 animate-fade-up">
+          What's brewing
+        </p>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-espresso mb-6 animate-fade-up delay-100">
+          Our Menu
+        </h1>
+        <Squiggle class="w-48 h-4 mx-auto text-cinnamon/40 mb-6 animate-fade-in delay-200" />
+        <p class="text-xl text-mocha/80 max-w-2xl mx-auto animate-fade-up delay-300">
+          From espressos and lattes to traditional Turkish coffee, plus fresh-baked pastries made with love.
+        </p>
+      </div>
+    </section>
+
+    <!-- Photo Strip -->
+    <section class="py-8 bg-warm-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+            <img src="/images/cold_brew.jpg" alt="Cold brew coffee" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+            <img src="/images/pastries.jpg" alt="Fresh pastries" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+            <img src="/images/sweets.jpg" alt="Turkish sweets" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+            <img src="/images/simit.jpg" alt="Fresh simit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Sections -->
+    <section class="py-16 md:py-24 bg-warm-white">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Navigation tabs -->
+        <nav class="flex flex-wrap justify-center gap-4 mb-16">
+          <a href="#hot" class="px-6 py-2 rounded-full bg-espresso text-cream font-medium hover:bg-mocha transition-colors">Hot Drinks</a>
+          <a href="#cold" class="px-6 py-2 rounded-full border-2 border-espresso text-espresso font-medium hover:bg-espresso hover:text-cream transition-colors">Cold Drinks</a>
+          <a href="#food" class="px-6 py-2 rounded-full border-2 border-espresso text-espresso font-medium hover:bg-espresso hover:text-cream transition-colors">Food</a>
+          <a href="#bottled" class="px-6 py-2 rounded-full border-2 border-espresso text-espresso font-medium hover:bg-espresso hover:text-cream transition-colors">Bottled</a>
+        </nav>
+
+        <!-- Hot Drinks -->
+        <div id="hot" class="mb-20 scroll-mt-8">
+          <div class="flex items-center gap-4 mb-10">
+            <CoffeeCup class="w-12 h-12 text-cinnamon" />
+            <div>
+              <p class="handwritten text-2xl text-cinnamon">Warm & cozy</p>
+              <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso">Hot Drinks</h2>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {hotDrinks.map((item) => (
+              <div class="flex justify-between items-baseline py-4 px-5 bg-cream/50 rounded-xl hover:bg-cream transition-colors">
+                <span class="text-espresso font-medium">{item.name}</span>
+                <span class="text-cinnamon font-semibold">${item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div id="cold" class="mb-20 scroll-mt-8">
+          <div class="flex items-center gap-4 mb-10">
+            <!-- Plastic cold brew cup with dome lid and straw -->
+            <svg class="w-12 h-12 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <!-- Cup body -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8l1 13h8l1-13" />
+              <!-- Dome lid -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8h12c0 0 0.5-2 -6-2s-6 2-6 2z" />
+              <!-- Lid rim -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.5 8h13" />
+              <!-- Straw -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 2v6M14 8l1 8" />
+            </svg>
+            <div>
+              <p class="handwritten text-2xl text-cinnamon">Cool & refreshing</p>
+              <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso">Cold Drinks</h2>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {coldDrinks.map((item) => (
+              <div class="flex justify-between items-baseline py-4 px-5 bg-cream/50 rounded-xl hover:bg-cream transition-colors">
+                <div>
+                  <span class="text-espresso font-medium">{item.name}</span>
+                  {item.note && <span class="text-mocha/60 text-sm ml-2">{item.note}</span>}
+                </div>
+                <span class="text-cinnamon font-semibold">${item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Food -->
+        <div id="food" class="mb-20 scroll-mt-8">
+          <div class="flex items-center gap-4 mb-10">
+            <Pogaca class="w-12 h-10 text-cinnamon" />
+            <div>
+              <p class="handwritten text-2xl text-cinnamon">Fresh baked daily</p>
+              <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso">Food & Pastries</h2>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {food.map((item) => (
+              <div class="flex justify-between items-baseline py-4 px-5 bg-cream/50 rounded-xl hover:bg-cream transition-colors">
+                <span class="text-espresso font-medium">{item.name}</span>
+                <span class="text-cinnamon font-semibold">${item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Bottled Drinks -->
+        <div id="bottled" class="scroll-mt-8">
+          <div class="flex items-center gap-4 mb-10">
+            <!-- Classic water bottle -->
+            <svg class="w-12 h-12 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <!-- Bottle body -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6v1a1 1 0 001 1h4a1 1 0 001-1V6" />
+              <!-- Bottle neck -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 3h4v3h-4z" />
+              <!-- Cap -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 2h4" />
+              <!-- Main body -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 8h8l1 13H7L8 8z" />
+              <!-- Water line -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8.5 12h7" opacity="0.5" />
+            </svg>
+            <div>
+              <p class="handwritten text-2xl text-cinnamon">Grab & go</p>
+              <h2 class="font-display text-3xl md:text-4xl font-bold text-espresso">Bottled Drinks</h2>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {bottledDrinks.map((item) => (
+              <div class="flex justify-between items-baseline py-4 px-5 bg-cream/50 rounded-xl hover:bg-cream transition-colors">
+                <span class="text-espresso font-medium">{item.name}</span>
+                <span class="text-cinnamon font-semibold">${item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section class="py-12 bg-cream">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-mocha/70 text-lg">
+          Menu items and prices subject to change. Please ask about allergens and dietary accommodations.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-espresso text-cream relative overflow-hidden">
+      <TurkishPattern class="absolute top-0 right-0 w-64 h-64 text-cream/5" />
+      <TurkishPattern class="absolute bottom-0 left-0 w-48 h-48 text-cream/5" />
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <p class="handwritten text-3xl text-cinnamon mb-4">Ready to order?</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">
+          Visit Us Today
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="bg-cinnamon hover:bg-terracotta text-white px-8 py-4 rounded-full font-medium transition-all duration-300 text-lg hover:scale-105"
+          >
+            Get Directions
+          </a>
+          <a
+            href="https://www.instagram.com/Sipofjoy_cafe"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-cream hover:bg-cream hover:text-espresso px-8 py-4 rounded-full font-medium transition-all duration-300 text-lg inline-flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            @Sipofjoy_cafe
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

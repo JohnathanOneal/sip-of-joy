@@ -1,0 +1,48 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<!-- Hand-drawn leaf/plant decoration -->
+<svg
+  class={className}
+  viewBox="0 0 60 80"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Stem -->
+  <path
+    d="M30 80 C30 60, 28 50, 30 30"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Left leaf -->
+  <path
+    d="M30 50 C20 45, 10 40, 8 30 C6 20, 15 15, 30 30"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Right leaf -->
+  <path
+    d="M30 40 C40 35, 50 28, 52 18 C54 8, 42 5, 30 22"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Top leaf -->
+  <path
+    d="M30 30 C25 20, 22 10, 30 5 C38 10, 35 20, 30 30"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+</svg>
