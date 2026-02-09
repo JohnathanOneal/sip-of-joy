@@ -8,12 +8,12 @@ import Squiggle from '../components/illustrations/Squiggle.astro';
 import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
 ---
 
-<Layout title="Contact" description="Visit Sip of Joy at 661 Tremont Street in Boston's South End. View our hours, get directions, and connect with us.">
+<Layout title="Visit" description="Visit Sip of Joy at 661 Tremont Street in Boston's South End. View our hours, get directions, and connect with us.">
   <Nav />
 
   <main>
     <!-- Hero -->
-    <section class="relative py-20 md:py-28 overflow-hidden texture-grain">
+    <section class="relative py-14 md:py-28 overflow-hidden texture-grain">
       <div class="absolute inset-0 bg-gradient-to-br from-cream via-warm-white to-cream"></div>
 
       <!-- Decorative elements -->
@@ -21,25 +21,25 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
       <Leaf class="absolute bottom-10 left-[8%] w-16 h-24 text-sage/30 animate-float-delayed hidden md:block" />
 
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <p class="handwritten text-3xl md:text-4xl text-cinnamon mb-4 animate-fade-up">
+        <p class="handwritten text-2xl md:text-4xl text-cinnamon mb-3 md:mb-4 animate-fade-up">
           Come visit
         </p>
-        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-espresso mb-6 animate-fade-up delay-100">
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-espresso mb-4 md:mb-6 animate-fade-up delay-100">
           Find Us
         </h1>
-        <Squiggle class="w-48 h-4 mx-auto text-cinnamon/40 animate-fade-in delay-200" />
+        <Squiggle class="w-32 md:w-48 h-4 mx-auto text-cinnamon/40 animate-fade-in delay-200" />
       </div>
     </section>
 
     <!-- Main Content -->
-    <section class="py-16 md:py-24 bg-warm-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+    <section class="py-10 md:py-24 bg-warm-white">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16">
 
           <!-- Left: Info Cards -->
-          <div class="space-y-8">
+          <div class="space-y-5 md:space-y-8">
             <!-- Address Card -->
-            <div class="bg-cream p-8 rounded-3xl">
+            <div class="bg-cream p-5 md:p-8 rounded-2xl md:rounded-3xl">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-cinnamon/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
             </div>
 
             <!-- Hours Card -->
-            <div class="bg-espresso text-cream p-8 rounded-3xl relative overflow-hidden">
+            <div class="bg-espresso text-cream p-5 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden">
               <TurkishPattern class="absolute top-0 right-0 w-32 h-32 text-cream/5" />
               <div class="flex items-start gap-4 relative z-10">
                 <div class="w-12 h-12 bg-cinnamon/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -82,7 +82,7 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
             </div>
 
             <!-- Contact Card -->
-            <div class="bg-cream p-8 rounded-3xl">
+            <div class="bg-cream p-5 md:p-8 rounded-2xl md:rounded-3xl">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-cinnamon/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6 text-cinnamon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,7 +125,7 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
 
           <!-- Right: Map -->
           <div class="relative">
-            <div class="aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl">
+            <div class="aspect-video md:aspect-square lg:aspect-auto lg:h-full min-h-[280px] md:min-h-[400px] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.0876!2d-71.0739!3d42.3425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a0f4d6c4c4f%3A0x0!2s661%20Tremont%20St%2C%20Boston%2C%20MA%2002118!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 width="100%"
@@ -147,8 +147,8 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
     </section>
 
     <!-- Parking & Transit Info -->
-    <section class="py-16 bg-cream">
-      <div class="max-w-4xl mx-auto px-6">
+    <section class="py-10 md:py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 md:px-6">
         <div class="text-center mb-10">
           <p class="handwritten text-2xl text-cinnamon mb-2">Getting Here</p>
           <h2 class="font-display text-3xl font-bold text-espresso">Parking & Transit</h2>
@@ -168,22 +168,22 @@ import TurkishPattern from '../components/illustrations/TurkishPattern.astro';
     </section>
 
     <!-- Photo Strip -->
-    <section class="py-8 bg-cream">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="aspect-video rounded-2xl overflow-hidden shadow-md">
+    <section class="py-6 md:py-8 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-2 gap-3 md:gap-4">
+          <div class="aspect-video rounded-xl md:rounded-2xl overflow-hidden shadow-md">
             <img src="/images/exterior-1.jpg" alt="Sip of Joy exterior" class="w-full h-full object-cover" />
           </div>
-          <div class="aspect-video rounded-2xl overflow-hidden shadow-md">
-            <img src="/images/pastries.jpg" alt="Fresh pastries at Sip of Joy" class="w-full h-full object-cover" />
+          <div class="aspect-video rounded-xl md:rounded-2xl overflow-hidden shadow-md">
+            <img src="/images/pastries.jpg" alt="handcrafted pastries at Sip of Joy" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-16 bg-warm-white">
-      <div class="max-w-4xl mx-auto px-6 text-center">
+    <section class="py-10 md:py-16 bg-warm-white">
+      <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
         <CoffeeCup class="w-16 h-16 text-cinnamon/40 mx-auto mb-6" />
         <p class="handwritten text-2xl text-cinnamon mb-2">Ready for a coffee?</p>
         <h2 class="font-display text-3xl font-bold text-espresso mb-6">We Can't Wait to See You</h2>
